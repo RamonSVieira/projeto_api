@@ -8,7 +8,7 @@ use chriskacerguis\RestServer\RestController;
 class Cliente extends RestController{
     public function __construct(){
         parent::__construct();
-        $this->load->model('PREENCHA_AQUI_O_NOME_DO_MODEL');
+        $this->load->model('ClienteModel');
     }
 
     public function index_get($id=NULL){
