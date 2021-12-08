@@ -39,7 +39,7 @@ class Cliente extends RestController{
     public function index_put($id){
         $cliente = $this->put("cliente");
 
-        $this->ClienteModel->atualizar($cliente);
+        $this->ClienteModel->atualizar($id, $cliente);
         $resultado["status"]=true;
         $resultado["messagem"]="Dados atualizados com sucesso";
         $this->response($resultado, RestController::HTTP_OK);
