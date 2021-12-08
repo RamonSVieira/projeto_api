@@ -53,7 +53,7 @@ class Produto extends RestController{
         $this->ProdutoModel->atualizar($id, $produto, $preco, $qtd, $codfabricante, $codgrupo);
         $resultado["status"]=true;
         $resultado["messagem"]="Dados atualizados com sucesso";
-        $this->response($produto, RestController::HTTP_OK);
+        $this->response($resultado, RestController::HTTP_OK);
     }
 
     public function index_delete($id){
