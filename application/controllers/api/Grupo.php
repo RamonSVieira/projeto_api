@@ -39,7 +39,7 @@ class Grupo extends RestController{
     public function index_put($id){
         $grupo = $this->put("grupo");
 
-        $this->GrupoModel->atualizar($grupo);
+        $this->GrupoModel->atualizar($id, $grupo);
         $resultado["status"]=true;
         $resultado["messagem"]="Dados atualizados com sucesso";
         $this->response($resultado, RestController::HTTP_OK);
