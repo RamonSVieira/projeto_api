@@ -39,7 +39,7 @@ class Fornecedor extends RestController{
     public function index_put($id){
         $fornecedor = $this->put("fornecedor");
 
-        $this->fornecedorModel->atualizar($id, $fornecedor);
+        $this->FornecedorModel->atualizar($id, $fornecedor);
         $resultado["status"]=true;
         $resultado["messagem"]="Dados atualizados com sucesso";
         $this->response($resultado, RestController::HTTP_OK);
